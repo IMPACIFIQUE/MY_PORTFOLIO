@@ -6,7 +6,7 @@ export default function Testimon() {
     {
       id: 1,
       name: "Jean Claude N.",
-      role: "CEO, TECH Company",
+      role: "CEO, Tech Rwanda",
       feedback: "Pacifique developed our modern recruitment portal (JOB_QUEST). His backend architecture is super fast, secure, and handling thousands of user requests effortlessly.",
       project: "JOB_QUEST"
     },

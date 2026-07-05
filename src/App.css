@@ -61,20 +61,23 @@ body {
 #about {
 
   background: #05090f;
+  background: #030109;
 
 }
 
 #skills {
 
   background: #05090f;
+=======
 
+  background: #1a1919;
 
 }
+
 
 #projects {
   background:#05090f;
 }
-
 #testimonials {
 
   background: #05090f;
@@ -82,19 +85,22 @@ body {
 
 #contact {
   background: #05090f;
-
+=======
+  background: #1a1919;
+=======
+  background: #030109;
 }
 
 #projects {
-  background:  #05090f;
+  background: #030109;
 }
-
 #testimonials {
-  background:  #05090f;
+  background: #030109;
 }
 
 #contact {
   background: #030109;
+
   color: white;
   height: 90vh;
 }

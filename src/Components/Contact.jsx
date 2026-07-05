@@ -112,63 +112,21 @@ export default function Contact() {
 <div className='handle'>
   <h2 className='heading'>meet  with  social meadia</h2> <br />
   <p className='social-media'>use social media link to meet with me</p>
-  <section className='group'>
-  <div className='handle-media'>
-   <a href="https://github.com/PACIFIQUEVIBUCODER" target="_blank" rel="noreferrer" className="social-icon-links">
-    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="social-icon-img" />
-  </a>
-  </div>
-  <div className='handle-media'>
-   <a href="https://linkedin.com/in/your_username" target="_blank" rel="noreferrer" className="social-icon-links">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" className="social-icon-img" />
-  </a>
-  </div>
-  <div className='handle-media'>
-
- <i class="fab fa-facebook" ></i>
-                
-  </div>
-  <div className='handle-media'>
-    <i class="fab fa-instagram" npm ></i>
-  </div>
-  <div className='handle-media'>
-    <i class="fab fa-twitter"></i> 
-  </div>
-
-<div className='handle-media'>
-     <a href="https://t.me/your_telegram_username" target="_blank" rel="noreferrer" className="social-icon-links">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" className="social-icon-img" />
-  </a>
-  </div>
-  </section>
+  <div className='handle-media'></div>
+  <div className='handle-media'></div>
+  <div className='handle-media'></div>
+  <div className='handle-media'></div>
+  <div className='handle-media'></div>
 </div>
 <div className='handle'>
   <h2 className='heading'>contact</h2><br />
-
   <div className='handle2'>
-  <div className='handle-contact1'> 
-     <i class="fas fa-phone"></i>
-      </div>
-
-   <span className="type">phone <br />
-   <span className='new-value'> 0782654256 </span>
-  </span>
-
-  <div className='handle-contact1'>
-    
-    <i class="fab fa-whatsapp"></i>
-    </div> 
-
-    <span className='type'>whatapp <br />
-    <span className='new-value1'>0782564432 </span> 
-    </span>
+  <div className='handle-contact1'></div> <span className="type">phone <br /><span className='new-value'> 0782654256 </span></span>
+  <div className='handle-contact1'></div> <span className='type'>whatapp <br /><span className='new-value1'>0782564432 </span> </span>
 </div>
-
 </div>
 <div className='handle'>
-  <h2 className='heading'>
-    <i class="fas fa-location-dot"></i> location
-    </h2><br />
+  <h2 className='heading'>location</h2><br />
   <div className='location'> District : <span className='location-value'>Kicukiro</span> </div><br />
     <div className='location'> City : <span className='location-value'>Kigali</span> </div><br />
       <div className='location'>Country   : <span className='location-value'>Rwanda</span> </div><br />

@@ -1,10 +1,9 @@
 /* CONTAINER NKURU */
 .contact-page-container {
   width: 210vh;
-  height: 50vh;
   margin-left: -10vh;
   margin-right: -15vh;
-  margin-top: -50vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   filter: opacity(85%);
@@ -212,13 +211,14 @@
                 opacity: 0;
             }
         }
-.footer-section {
+.footer-section{
   background-color: #00000c;
   width: 212vh;
+  margin-top: 10vh;
   margin-left: -5vh;
-  height: 70vh;
-  padding-bottom: 20vh;
-  display: flex;
+    height: 70vh;
+    padding-bottom: 20vh;
+    display: flex;
 }
 .handle{
   margin-left: 15vh;
@@ -249,7 +249,7 @@
  .handle-media{
   width: 5vh;
   height: 5vh;
-  background-color:#1e1e1e;
+  background-color:#a4a2a2;
   filter: brightness(70%);
   flex-direction: row;
   margin-top: 3vh;
@@ -260,7 +260,7 @@
   width: 5vh;
   height: 5vh;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #797674;
  }
 
 .type{
@@ -304,51 +304,4 @@
   font-size: 2.3vh;
   background-color: #000000;
   text-shadow: 1px 1px 1px rgb(54, 54, 54);
-}
-.group{
- margin-top: 2vh;
-  display: flex;
-  gap: 2vh;
-}
-.social-icon-links{
-
-}
-.social-icon-img{
- margin-left: 0.7vh;
- margin-top: 0.6vh;
-}
-.social-icon-links:hover {
-  transform: translateY(-1vh);
-   border-color: #00ff88;
-  filter: drop-shadow(0 0 2px rgb(0, 0, 0));
-  }
-
-.social-icon-links:hover .social-icon-img {
-  filter: none; /* Bisubiza amabara yazo y'umwimerere (Blue kuri LinkedIn, n'ibindi) */
-}
-
-.handle i{
-    margin-left: 1vh;
- color: #abaeae;
-    margin-top: 1vh;
-   font-size: 3vh;
-}
-
-.handle i:hover{
-   filter: none;
-   border-color: #00ff88;
-  filter: drop-shadow(0 0 2px rgb(0, 0, 0));
-  color: #fa5c00;
-}
-
-.handle-contact1 i{
-  color: #ff9500;
-  filter: drop-shadow(0 0 1px green);
-}
-
-
-.heading i{
-  color: #ff9900;
-  margin-left: -1vh;
-  font-size: 4vh;
 }

@@ -7,16 +7,16 @@ export default function About() {
     {
       role: "Full-Stack Developer",
       company: "Freelance / Personal Projects",
-      duration: "2024 - 2025",
-      description: "Developing scalable web applications using Vue JS, CSS,HTML and JavaScript. Focused on building fast RESTful APIs, securing servers, and designing clean user interfaces.",
-      skills: ["Vue JS", "JavaScript", "HTML","CSS", "Git"]
+      duration: "2025 - Present",
+      description: "Developing scalable web applications using React, PHP, and JavaScript. Focused on building fast RESTful APIs, securing servers, and designing clean user interfaces.",
+      skills: ["React", "JavaScript", "PHP", "Git"]
     },
     {
       role: "Frontend Developer & UI Designer",
       company: "Tech Solutions Hub (Junior Role/Intern)",
-      duration: "2025 - 2026",
-      description: "Created responsive user interfaces using react , CSS,  Vue.js, javascript and PHP, designing user interface using designing tools and  Collaborating with teams to implement seamless user experiences and managed version control using Git.",
-      skills: ["react","Vue.js","javascript","HTML","css",  "UI Design", "Git"]
+      duration: "2024 - 2025",
+      description: "Created responsive user interfaces using HTML, CSS, and Vue.js. Collaborated with teams to implement seamless user experiences and managed version control using Git.",
+      skills: ["HTML", "Vue.js", "UI Design", "Git"]
     }
   ];
 
