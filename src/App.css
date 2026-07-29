@@ -54,7 +54,6 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     radial-gradient(circle at 50% 60%, rgba(255, 159, 0, 0.15), transparent 80%); /* Iyi izana glow isa n'umuhondo ijana n'izina ryawe */
-  
   background-size: 40px 40px, 40px 40px, auto; /* Ingano ya buri square */
 }
 

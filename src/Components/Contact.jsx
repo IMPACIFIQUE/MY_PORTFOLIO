@@ -7,7 +7,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted!");
-    alert("Urakoze kuduha ubutumwa! Turakubaza mukanya.");
+    alert("message was sent !");
     e.target.reset();
   };
 
@@ -124,15 +124,18 @@ export default function Contact() {
   </a>
   </div>
   <div className='handle-media'>
-
- <i class="fab fa-facebook" ></i>
+ <a href="https://facebook.com/your_username" target="_blank" rel="noreferrer" className="social-icon-links">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" className="social-icon-img" />
+              </a>
                 
   </div>
   <div className='handle-media'>
     <i class="fab fa-instagram" npm ></i>
   </div>
   <div className='handle-media'>
-    <i class="fab fa-twitter"></i> 
+    <a href="https://twitter.com/your_username" target="_blank" rel="noreferrer" className="social-icon-links">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" className="social-icon-img" />
+              </a> 
   </div>
 
 <div className='handle-media'>
