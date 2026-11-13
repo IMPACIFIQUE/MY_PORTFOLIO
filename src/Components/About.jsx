@@ -65,7 +65,7 @@ export default function About() {
           </div>
 
           {/* RIGHT SIDE - TIMELINE WITH EXPERIENCE SUBTITLE */}
-          <div className="about-right">
+          <div className="about-right" id="experience">
             <h4 className="journey-experience">2+ Years of Experience</h4>
 
             <h3 className="section-subtitle">My Journey</h3>

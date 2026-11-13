@@ -1,34 +1,101 @@
 
+.app.hidden {
+  display: none;
+}
+
+.app.fade-in {
+  animation: contentFadeIn 0.8s ease forwards;
+}
+
+/* Opacity only: a lingering transform here would turn the fixed header into
+   a page-relative absolute element, making it scroll away. */
+@keyframes contentFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  background: #0c0c0c;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 120px 10% 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #home {
-    min-height: 100vh;
-    padding: 95px 7.3% 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    background:
-        radial-gradient(ellipse at 90% 40%, #3e08a7 0%, transparent 40%),
-        radial-gradient(ellipse at 65% 85%, #170c70 0%, transparent 35%),
-        linear-gradient(120deg, #05051c, #080526 60%, #10033b);
-
-    scroll-margin-top: 90px;
+  background-color: #060110;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 50% 60%, rgba(255, 159, 0, 0.15), transparent 80%); /* Iyi izana glow isa n'umuhondo ijana n'izina ryawe */
+  background-size: 40px 40px, 40px 40px, auto; /* Ingano ya buri square */
 }
 
-#home .home-container {
-    width: 100%;
-    max-width: 1600px;
+#about {
+
+  background: #05090f;
+
 }
 
-#about,
-#skills,
-#projects,
+#skills {
+
+  background: #05090f;
+
+
+}
+
+#projects {
+  background:#05090f;
+}
+
 #testimonials {
-    background: #05051d;
-    scroll-margin-top: 90px;
+
+  background: #05090f;
 }
 
 #contact {
-    background: #030109;
-    color: white;
-    scroll-margin-top: 90px;
+  background: #05090f;
+
+}
+
+#projects {
+  background:  #05090f;
+}
+
+#testimonials {
+  background:  #05090f;
+}
+
+#contact {
+  background: #030109;
+  color: white;
+  height: 90vh;
 }
