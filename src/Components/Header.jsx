@@ -1,37 +1,52 @@
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import "./Header.css";
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Niba bamanutseho pixels zirenga 50, "scrolled" iba true
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
-      <div className="logo">
-        <h2>PACIFIQUE</h2>
-      </div>
+    <header className="header">
 
-      <nav className="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
+      {/* Logo */}
+      <a href="#home" className="header-logo" onClick={closeMenu}>
+        <span className="logo-icon">P</span>
+        <span>Pacifique</span>
+      </a>
+
+      {/* Navigation */}
+      <nav className={`navbar ${menuOpen ? "show" : ""}`}>
+
+        <a href="#home" className="active" onClick={closeMenu}>
+          <span>⌂</span> Home
+        </a>
+
+        <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#skills" onClick={closeMenu}>Skills</a>
+        <a href="#projects" onClick={closeMenu}>Projects</a>
+        <a href="#experience" onClick={closeMenu}>Experience</a>
+        <a href="#testimonials" onClick={closeMenu}>Testimonials</a>
+        <a href="#contact" onClick={closeMenu}>Contact</a>
+
       </nav>
+
+      {/* Download CV */}
+      <a href="/cv.pdf" className="header-cv" download>
+        <span>↓</span> Download CV
+      </a>
+
+      {/* Mobile Menu */}
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+        aria-expanded={menuOpen}
+      >
+        {menuOpen ? "✕" : "☰"}
+      </button>
+
     </header>
   );
 }
