@@ -1,35 +1,30 @@
+
 import { useState, useEffect } from "react";
 import "./Home.css";
 import profilePic from "../assets/profile.png";
 
 export default function Home() {
   const titles = [
-    "A FRONTEND DEVELOPER",
-    "A BACK-END DEVELOPER",
-    "A FULL-STACK DEVELOPER",
-    "A WEB DEVELOPER",
-    "A SOFTWARE ENGINEER",
+    "Frontend Developer",
+    "Backend Developer",
+    "Full-Stack Developer",
+    "Web Developer",
+    "Software Engineer",
   ];
 
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    const currentFullText = titles[currentTitleIndex];
-    let typingSpeed = 100;
+    const fullText = titles[currentTitleIndex];
 
-    if (isDeleting) {
-      typingSpeed = 50;
+    if (!isDeleting && currentText === fullText) {
+      const timeout = setTimeout(() => setIsDeleting(true), 2000);
+      return () => clearTimeout(timeout);
     }
 
-    if (!isDeleting && currentText === currentFullText) {
-      const timeout = setTimeout(() => {
-        setIsDeleting(true);
-      }, 3000);
-      return () => clearTimeout(timeout);
-    } else if (isDeleting && currentText === "") {
+    if (isDeleting && currentText === "") {
       setIsDeleting(false);
       setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
       return;
@@ -38,110 +33,134 @@ export default function Home() {
     const timeout = setTimeout(() => {
       setCurrentText(
         isDeleting
-          ? currentFullText.substring(0, currentText.length - 1)
-          : currentFullText.substring(0, currentText.length + 1)
+          ? fullText.substring(0, currentText.length - 1)
+          : fullText.substring(0, currentText.length + 1)
       );
-    }, typingSpeed);
+    }, isDeleting ? 45 : 100);
 
     return () => clearTimeout(timeout);
   }, [currentText, isDeleting, currentTitleIndex]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log("Searching for:", searchQuery);
-  };
-
   return (
     <div className="home-container">
-      <section className="home-content">
-        {/* --- SEARCH BOX --- */}
-        <form onSubmit={handleSearch} className="search-container">
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search projects, skills, or tech stack..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button type="submit" className="search-button">
-            Search
-          </button>
-        </form>
 
-        <br />
-        <h1 className="me">HELLO, I'M PACIFIQUE</h1>
+      {/* Background decorations */}
+      <div className="glow glow-one"></div>
+      <div className="glow glow-two"></div>
+      <div className="dots dots-left"></div>
+      <div className="dots dots-right"></div>
 
-        <div>
-          <br />
-          <h2 className="my-status">
+      {/* Hero content */}
+      <div className="hero-content">
+
+        {/* LEFT SIDE */}
+        <div className="intro">
+
+          <div className="availability">
+            <span className="status-dot"></span>
+            Available for Work
+          </div>
+
+          <h1>
+            Hi, I'm <br />
+            <span className="gradient-name">
+              IMANIRUMVA Pacifique
+            </span>
+          </h1>
+
+          <h2>
             {currentText}
-            <span className="cursor">|</span>
+            <span className="typing-cursor"></span>
           </h2>
-          <br />
-          <p className="hero-description">
-            I Develop secure servers, database structures, and fast RESTful APIs
-            to power applications
+
+          <p className="description">
+            I build modern, responsive and user-friendly web
+            applications with a passion for clean code,
+            creative solutions and great design.
           </p>
+
+          {/* Buttons */}
+          <div className="hero-buttons">
+
+            <a href="#projects" className="primary-button">
+              &lt;/&gt; View My Projects <span>→</span>
+            </a>
+
+            <a href="#contact" className="secondary-button">
+              ✉ Contact Me
+            </a>
+
+          </div>
+
+          {/* Statistics */}
+          <div className="statistics">
+
+            <div className="stat">
+              <span className="stat-icon">🏆</span>
+              <div>
+                <strong>2+</strong>
+                <small>Years<br />Experience</small>
+              </div>
+            </div>
+
+            <div className="stat">
+              <span className="stat-icon">💼</span>
+              <div>
+                <strong>5+</strong>
+                <small>Live<br />Projects</small>
+              </div>
+            </div>
+
+            <div className="stat">
+              <span className="stat-icon">&lt;/&gt;</span>
+              <div>
+                <strong>100%</strong>
+                <small>Clean Code</small>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-       
-        {/* --- INTERACTIVE METRICS SECTION --- */}
-        <div className="metrics-container">
-          <div className="metric-card">
-            <h3>2+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div className="metric-card">
-            <h3>5</h3>
-            <p>Live Projects</p>
-          </div>
-          <div className="metric-card">
-            <h3>100%</h3>
-            <p>Clean & Scalable Code</p>
-          </div>
-        </div>
- {/* --- SOCIAL MEDIA LINKS MUNSI YA METRICS WITH ICONS --- */}
-<div className="home-social-links">
-  <a href="https://github.com/PACIFIQUEVIBUCODER" target="_blank" rel="noreferrer" className="social-icon-link">
-    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="social-icon-img" />
-  </a>
-  <a href="https://linkedin.com/in/your_username" target="_blank" rel="noreferrer" className="social-icon-link">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" className="social-icon-img" />
-  </a>
-  <a href="https://t.me/your_telegram_username" target="_blank" rel="noreferrer" className="social-icon-link">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" className="social-icon-img" />
-  </a>
-</div>
-      </section>
+        {/* RIGHT SIDE - PROFILE */}
+        <div className="profile-area">
 
-      {/* --- IFATA RUHANDE RW'IBURYO RYOSE --- */}
-      <div className="right-sidebar">
-        <aside className="home-image">
-          <h2 className="tell-about">My Portfolio</h2>
-          <img src={profilePic} alt="Pacifique" className="img1" />
-          <br />
-          <h3 className="name">PACIFIQUE</h3>
-          <div className="list">
-            <h5 className="list1">imanirumvapacifique39@gmail.com</h5>
-            <h5 className="list2">github.com/PACIFIQUEVIBUCODER</h5>
-          </div>
-        </aside>
+          <div className="profile-circle"></div>
+          <div className="profile-glow"></div>
 
-        {/* --- NGAYI CARD IRI MUNSI YAYO NEZA --- */}
-        <div className="dev-object-card">
-          <pre>
-            {`const developer = {
-  name: "Imanirumva Pacifique",
-  skills: [
-    "PHP", "HTML", "React", 
-    "Vue.js", "UI Design", 
-    "Javascript", "Git Version Control System"
-  ],
-  my_vision: "Build Useful Thingsand Discovering Solutions That Help Real People"
-};`}
-          </pre>
+          <img
+            src={profilePic}
+            alt="Pacifique - Full Stack Developer"
+            className="profile-image"
+          />
+
+          {/* Floating technology icons */}
+          <div className="tech-icon react-icon">⚛</div>
+
+          <div className="tech-icon vue-icon">V</div>
+
+          <div className="tech-icon js-icon">JS</div>
+
+          <div className="tech-icon node-icon">
+            ⬡
+            <small>Node</small>
+          </div>
+
+          <div className="tech-icon git-icon">◆</div>
+
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <a href="#about" className="scroll-indicator">
+        <span>↓</span>
+        <small>Scroll Down</small>
+      </a>
+
+      {/* Bottom decorations */}
+      <div className="bottom-wave"></div>
+      <div className="bottom-wave second-wave"></div>
+
     </div>
   );
 }
