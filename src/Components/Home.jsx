@@ -193,21 +193,6 @@ export default function Home() {
             code and great design.
           </p>
 
-          <div className="hero-actions">
-            <a className="btn btn-primary" href="#projects">
-              <span className="btn-code" aria-hidden="true">
-                {"</>"}
-              </span>
-              View My Projects
-              <i className="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i>
-            </a>
-
-            <a className="btn btn-ghost" href="#contact">
-              <i className="fa-regular fa-envelope" aria-hidden="true"></i>
-              Contact Me
-            </a>
-          </div>
-
           <div className="hero-stats">
             {STATS.map((stat) => (
               <div className={`stat stat--${stat.tone}`} key={stat.label}>

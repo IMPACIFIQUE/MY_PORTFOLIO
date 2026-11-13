@@ -3,13 +3,13 @@ import "./Header.css";
 import cvFile from "../assets/IMANIRUMVA_Pacifique_FlowCV_Resume_2026-04-22.pdf";
 
 const NAV_LINKS = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
-  { id: "experience", label: "Experience" },
-  { id: "testimonials", label: "Testimonials" },
-  { id: "contact", label: "Contact" },
+  { id: "home", label: "Home", icon: "home" },
+  { id: "about", label: "About", icon: "person" },
+  { id: "skills", label: "Skills", icon: "psychology" },
+  { id: "projects", label: "Projects", icon: "grid_view" },
+  { id: "experience", label: "Experience", icon: "work_history" },
+  { id: "testimonials", label: "Testimonials", icon: "reviews" },
+  { id: "contact", label: "Contact", icon: "mail" },
 ];
 
 export default function Header() {
@@ -17,6 +17,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const [iconsReady, setIconsReady] = useState(false);
 
   // Keep track of the scroll position and of the section currently in view.
   useEffect(() => {
@@ -90,13 +91,33 @@ export default function Header() {
 
   // Drop the menu when the viewport grows back to desktop size.
   useEffect(() => {
-    const desktop = window.matchMedia("(min-width: 1081px)");
+    const desktop = window.matchMedia("(min-width: 1201px)");
     const handleChange = (event) => {
       if (event.matches) setMenuOpen(false);
     };
 
     desktop.addEventListener("change", handleChange);
     return () => desktop.removeEventListener("change", handleChange);
+  }, []);
+
+  // Reveal the icon glyphs only once the Material Symbols font is available,
+  // so a slow or blocked font request never shows the ligature words.
+  useEffect(() => {
+    if (typeof document === "undefined" || !document.fonts) return undefined;
+
+    let cancelled = false;
+    const markReady = () => {
+      if (!cancelled) setIconsReady(true);
+    };
+
+    if (document.fonts.check('24px "Material Symbols Rounded"')) markReady();
+
+    document.fonts.ready.then(markReady).catch(() => {});
+    document.fonts.load('24px "Material Symbols Rounded"').then(markReady).catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const handleNavClick = (event, id) => {
@@ -130,7 +151,7 @@ export default function Header() {
 
         <nav
           id="primary-navigation"
-          className={`pill-nav ${menuOpen ? "is-open" : ""}`}
+          className={`pill-nav ${menuOpen ? "is-open" : ""} ${iconsReady ? "icons-ready" : ""}`}
           aria-label="Primary navigation"
         >
           {NAV_LINKS.map((link) => (
@@ -140,7 +161,10 @@ export default function Header() {
               className={active === link.id ? "is-active" : ""}
               onClick={(event) => handleNavClick(event, link.id)}
             >
-              {link.label}
+              <span className="nav-icon material-symbols-rounded" aria-hidden="true">
+                {link.icon}
+              </span>
+              <span className="nav-label">{link.label}</span>
             </a>
           ))}
 
