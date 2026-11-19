@@ -156,6 +156,8 @@
 
 .hero-role {
   margin-top: clamp(4px, 0.8vh, 10px);
+  width: 100%;
+  min-height: 1.03em;
   font-family: "Inter", "Plus Jakarta Sans", sans-serif;
   font-size: clamp(1.75rem, 5.2vw, 3rem);
   font-weight: 800;
