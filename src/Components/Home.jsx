@@ -231,13 +231,6 @@ export default function Home() {
         </div>
       </div>
 
-      <a className="scroll-cue" href="#about" aria-label="Scroll down to the about section">
-        <span className="scroll-circle" aria-hidden="true">
-          <i className="fa-solid fa-arrow-down"></i>
-        </span>
-        <span className="scroll-label">Scroll Down</span>
-      </a>
-
       {/* --------------------- Bottom wave ---------------------- */}
       <div className="hero-wave" aria-hidden="true">
         <svg viewBox="0 0 1440 160" preserveAspectRatio="none">

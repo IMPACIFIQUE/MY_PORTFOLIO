@@ -9,13 +9,15 @@
 .skills-card {
   max-width: 1300px;
   width: 100%;
+  background: linear-gradient(160deg, rgba(32, 21, 64, 0.55), rgba(13, 7, 30, 0.55));
   backdrop-filter: blur(4px);
  padding: 5vh;
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
   border-radius: 2vh ;
-  border: 1px solid rgb(1, 192, 151);
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  box-shadow: 0 24px 60px rgba(3, 0, 14, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 padding-left: 10vh;
   
 }
@@ -44,7 +46,8 @@ padding-left: 10vh;
   font-size: 2.8rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(96deg, #b06bff 0%, #8b5cf6 30%, #6366f1 62%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,6 +63,7 @@ padding-left: 10vh;
   width: 60%;
   height: 2px;
   opacity: 0.3;
+  background: linear-gradient(90deg, #a855f7, #38bdf8);
 }
 
 .skills-header .sub {
@@ -67,13 +71,13 @@ padding-left: 10vh;
   font-size: 2.5vh;
   font-weight: lighter;
   letter-spacing: 0.3px;
-  border-left: 3px solid #ff9f00;
+  border-left: 3px solid #a855f7;
   padding-left: 1rem;
   margin-top: 0.25rem;
 }
 
 .section-title {
-  color: #ff9f00;
+  color: #a855f7;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -88,7 +92,7 @@ padding-left: 10vh;
 
 .section-title i {
   font-size: 1.6rem;
-  color: #00ff88;
+  color: #38bdf8;
   opacity: 0.8;
   transition: transform 0.3s ease;
 }
@@ -137,7 +141,7 @@ padding-left: 10vh;
 }
 
 .skill-bar-meta .skill-name i {
-  color: #00ff88;
+  color: #38bdf8;
   font-size: 1rem;
   width: 1.4rem;
   text-align: center;
@@ -146,24 +150,24 @@ padding-left: 10vh;
 
 .skill-bar-item:hover .skill-name i {
   transform: scale(1.2);
-  color: #ff9f00;
+  color: #a855f7;
 }
 
 .skill-bar-meta .percentage {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-weight: 600;
   color: #ffffff;
-  background: rgba(0, 255, 136, 0.08);
+  background: rgba(56, 189, 248, 0.08);
   padding: 0.2rem 0.9rem;
   border-radius: 40px;
   font-size: 0.95rem;
-  border: 1px solid rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.1);
   transition: all 0.3s ease;
 }
 
 .skill-bar-item:hover .percentage {
-  background: rgba(255, 159, 0, 0.15);
-  border-color: rgba(255, 159, 0, 0.3);
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.3);
   transform: scale(1.05);
 }
 
@@ -181,10 +185,10 @@ padding-left: 10vh;
 .progress-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #00ff88, #ff9f00);
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
   border-radius: 40px;
   transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 0 12px rgba(0, 255, 136, 0.25);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
   animation: pulseGlow 3s infinite alternate;
   position: relative;
    
@@ -214,7 +218,7 @@ padding-left: 10vh;
 
 .skill-bar-item:hover .progress-fill {
   filter: brightness(1.2);
-  box-shadow: 0 0 18px #ff9f00;
+  box-shadow: 0 0 18px #a855f7;
 }
 
 .cards-grid {
@@ -230,9 +234,9 @@ padding-left: 10vh;
 
 .tech-card {
    background: 
-    radial-gradient(circle at 30% 40%, rgb(9, 9, 23) 0%, transparent 60%),
-    radial-gradient(circle at 70% 60%, #090722 0%, transparent 60%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+    radial-gradient(circle at 30% 40%, rgba(32, 21, 64, 0.6) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, #0d0622 0%, transparent 60%);
+  border: 1px solid rgba(139, 92, 246, 0.18);
   border-radius: 2vh;
 
   padding: 3vh;
@@ -263,16 +267,16 @@ padding-left: 10vh;
   left: -20%;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(255, 159, 0, 0.02) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.02) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   transition: all 0.5s ease;
 }
 
 .tech-card:hover {
-  border-color: #ff9f00;
+  border-color: #a855f7;
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 20px 40px -10px rgba(255, 159, 0, 0.15), 0 0 0 1px rgba(255, 159, 0, 0.1);
+  box-shadow: 0 20px 40px -10px rgba(168, 85, 247, 0.15), 0 0 0 1px rgba(168, 85, 247, 0.1);
 }
 
 .tech-card:hover::before,
@@ -283,8 +287,8 @@ padding-left: 10vh;
 
 .card-icon {
   font-size: 2.4rem;
-  color: #00ff88;
-  background: rgba(0, 255, 136, 0.04);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.04);
   width: 4rem;
   height: 4rem;
   display: flex;
@@ -292,14 +296,14 @@ padding-left: 10vh;
   justify-content: center;
   border-radius: 1.4rem;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(0, 255, 136, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.08);
   transition: all 0.3s ease;
 }
 
 .tech-card:hover .card-icon {
-  background: rgba(255, 159, 0, 0.05);
-  border-color: #ff9f00;
-  color: #ff9f00;
+  background: rgba(168, 85, 247, 0.05);
+  border-color: #a855f7;
+  color: #a855f7;
   transform: rotate(10deg) scale(1.1);
 }
 
@@ -313,7 +317,7 @@ padding-left: 10vh;
 }
 
 .tech-card:hover h3 {
-  color: #ff9f00;
+  color: #a855f7;
 }
 
 .tech-card .badge-list {
@@ -339,19 +343,19 @@ padding-left: 10vh;
 .badge-list span i {
   margin-right: 6px;
   font-size: 0.75rem;
-  color: #00ff88;
+  color: #38bdf8;
   transition: color 0.3s ease;
 }
 
 .badge-list span:hover {
-  border-color: rgba(255, 159, 0, 0.4);
+  border-color: rgba(168, 85, 247, 0.4);
   color: #fff;
   transform: translateY(-2px);
-  background: rgba(255, 159, 0, 0.05);
+  background: rgba(168, 85, 247, 0.05);
 }
 
 .badge-list span:hover i {
-  color: #ff9f00;
+  color: #a855f7;
 }
 
 .tech-card {
@@ -362,14 +366,14 @@ padding-left: 10vh;
   height: 50vh;
   display: flex;
   transition: all 0.3s ease;
-  border: 1px solid rgb(100, 98, 98);
-   border-top: 1vh solid rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(139, 92, 246, 0.18);
+   border-top: 1vh solid rgba(139, 92, 246, 0.08);
 }
 
  
 
 .tech-card .card-footer-note i {
-  color: #ff9f00;
+  color: #a855f7;
   margin-right: 0.3rem;
   transition: transform 0.3s ease;
 }
@@ -382,7 +386,7 @@ padding-left: 10vh;
 .divider-light {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(158, 88, 88, 0.02), rgba(255, 159, 0, 0.1), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.02), rgba(168, 85, 247, 0.18), rgba(56, 189, 248, 0.02));
   margin: 2.2rem 0 0.2rem 0;
   position: relative;
   z-index: 1;
@@ -392,10 +396,10 @@ padding-left: 10vh;
 /* scrollbar (optional) */
 ::-webkit-scrollbar {
   width: 5px;
-  background: #030508;
+  background: #0b0518;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ff9f00;
+  background: #a855f7;
   border-radius: 20px;
 
 }

@@ -35,8 +35,8 @@
 }
 
 .contact-detail-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(139, 92, 246, 0.06);
+  border: 1px solid rgba(139, 92, 246, 0.18);
   padding: 2vh 3vh;
   justify-content: space-between;
   align-items: center;
@@ -44,20 +44,20 @@
 }
 
 .contact-detail-item:hover {
-  border-color: #00ff88;
+  border-color: #38bdf8;
   transform: translateX(0.5vh);
-  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.1);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.1);
 }
 
 .detail-label {
   font-weight: bold;
-  color: #ff9f00;
+  color: #a855f7;
   font-size: 1vh 2vh ;
 }
 
 .detail-value {
   color: rgba(255, 255, 255, 0.9);
-  font-family: serif;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
   font-size: 2.5vh;
   margin-left: 1vh;
   text-shadow: 1px 1px 1px #000000;
@@ -70,23 +70,23 @@
 }
 
 .contact-form-card {
-  background: #030508;
-  background-image: 
-  linear-gradient(rgb(30, 27, 27) 1px, transparent 50%),
-  linear-gradient(45deg, rgb(29, 29, 39) 1px, transparent 50%);
-  background-size: 20px 20px ,20px 20px;
+  background-color: #0b0518;
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.07) 1px, transparent 1px),
+    linear-gradient(160deg, rgba(32, 21, 64, 0.92), rgba(13, 7, 30, 0.96));
+  background-size: 22px 22px, 22px 22px, auto;
   backdrop-filter: blur(10px);
-  border: 1px solid rgb(229, 78, 2);
-  border-radius: 6px; 
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  border-radius: 6px;
+  box-shadow: 0 24px 60px rgba(2, 0, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   padding: 4vh;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 
 .contact-form-card:hover {
-  border-color: rgba(255, 159, 0, 0.5);
+  border-color: rgba(168, 85, 247, 0.5);
   filter: drop-shadow(0 0 1px rgb(0, 0, 0));
 }
 
@@ -100,12 +100,12 @@
 .contact-input {
   width: 100%;
   height: 6vh;
-  background-color: rgba(0, 0, 0, 0.8); 
-  border: 1px solid #ea9400;
+  background-color: rgba(8, 3, 20, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.5);
   border-top: none;
   border-right: none;
   border-bottom-right-radius: none;
-  border-radius: 5px; 
+  border-radius: 5px;
   outline: none;
   padding-left: 20px;
   color: #ffffff;
@@ -126,7 +126,7 @@
 }
 
 .contact-input:focus {
-  border-color: #00ff88;
+  border-color: #38bdf8;
 }
 
 .contact-input::placeholder {
@@ -138,14 +138,21 @@
 }
 .submit-btn{
   height: 10vh;
-  background-color: #a96500;
+  background: linear-gradient(120deg, #8b5cf6 0%, #6366f1 52%, #3b82f6 100%);
   font-size: 5vh;
-  color: #000000;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
   border-radius: 1.3vh;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(109, 64, 240, 0.45);
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 .submit-btn:hover{
-  filter: drop-shadow(0 0 3px white);
+  filter: brightness(1.08);
   color: white;
+  box-shadow: 0 16px 34px rgba(109, 64, 240, 0.55);
   text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
@@ -213,7 +220,7 @@
             }
         }
 .footer-section {
-  background-color: #00000c;
+  background-color: transparent;
   width: 212vh;
   margin-left: -5vh;
   height: 70vh;
@@ -226,18 +233,19 @@
 }
 .heading{
   font-weight: normal;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
   font-size: 5vh;
   text-transform:capitalize;
-  color: darkorange;
+  color: #a855f7;
 }
 .heading1{
   margin-top: 2vh;
-  color:#00ff88;
+  color:#38bdf8;
   text-transform: capitalize;
   font-size: 2.8vh;
 }
 .heading1:hover{
-  color: #ff0000;
+  color: #c084fc;
   font-size: 2.9;
   text-shadow: 1px 1px 1px rgb(0, 0, 0);
   transform: translateY(-1px);
@@ -249,7 +257,7 @@
  .handle-media{
   width: 5vh;
   height: 5vh;
-  background-color:#1e1e1e;
+  background-color:#1a1030;
   filter: brightness(70%);
   flex-direction: row;
   margin-top: 3vh;
@@ -260,35 +268,35 @@
   width: 5vh;
   height: 5vh;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #0b0518;
  }
 
 .type{
   margin-left: -2vh;
-  color: #00ff88;
+  color: #38bdf8;
 }
 .new-value{
   margin-left: -6vh;
-    color: rgb(0, 17, 255);
+    color: #38bdf8;
 
 }
 .new-value1{
   margin-left: -5vh;
-  color: rgb(0, 17, 255);
+  color: #38bdf8;
 }
 .handle2{
   margin-left: 5vh;
 }
 .social-media{
-  color: #00bba5;
+  color: #38bdf8;
 }
 .over-all{
   font-family: serif;
   font-style: italic;
-  color: rgb(0, 166, 255);
+  color: #38bdf8;
 }
 .location{
-  color: #a96500;
+  color: #a855f7;
 }
 .location-value{
   color: #a4a2a2;
@@ -298,11 +306,12 @@
   padding-bottom: 3vh;
   text-align: center;
   justify-content: center;
-  font-family: serif;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
   font-style: italic;
   font-weight: lighter;
   font-size: 2.3vh;
-  background-color: #000000;
+  color: rgba(244, 240, 255, 0.6);
+  background-color: transparent;
   text-shadow: 1px 1px 1px rgb(54, 54, 54);
 }
 .group{
@@ -319,7 +328,7 @@
 }
 .social-icon-links:hover {
   transform: translateY(-1vh);
-   border-color: #00ff88;
+   border-color: #38bdf8;
   filter: drop-shadow(0 0 2px rgb(0, 0, 0));
   }
 
@@ -336,19 +345,19 @@
 
 .handle i:hover{
    filter: none;
-   border-color: #00ff88;
+   border-color: #38bdf8;
   filter: drop-shadow(0 0 2px rgb(0, 0, 0));
-  color: #fa5c00;
+  color: #c084fc;
 }
 
 .handle-contact1 i{
-  color: #ff9500;
-  filter: drop-shadow(0 0 1px green);
+  color: #c084fc;
+  filter: drop-shadow(0 0 1px #a855f7);
 }
 
 
 .heading i{
-  color: #ff9900;
+  color: #c084fc;
   margin-left: -1vh;
   font-size: 4vh;
 }

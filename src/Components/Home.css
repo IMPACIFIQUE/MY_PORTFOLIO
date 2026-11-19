@@ -414,48 +414,6 @@
   animation-delay: 0.9s;
 }
 
-/* ------------------------ Scroll cue ------------------------ */
-
-.scroll-cue {
-  position: absolute;
-  left: 50%;
-  bottom: calc(clamp(60px, 8vh, 100px) + 10px);
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 9px;
-  transform: translateX(-50%);
-  color: #b9b2d4;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.scroll-cue:hover {
-  color: #ffffff;
-}
-
-.scroll-circle {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1px solid rgba(168, 85, 247, 0.45);
-  background: rgba(10, 5, 25, 0.55);
-  color: #c4a5ff;
-  font-size: 13px;
-  animation: heroBob 2.6s ease-in-out infinite;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.scroll-cue:hover .scroll-circle {
-  border-color: rgba(192, 132, 252, 0.9);
-  box-shadow: 0 0 22px rgba(139, 92, 246, 0.45);
-}
-
 /* --------------------------- Wave --------------------------- */
 
 .hero-wave {
@@ -524,16 +482,6 @@
   }
   50% {
     transform: translateY(-8px);
-  }
-}
-
-@keyframes heroBob {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
   }
 }
 
@@ -766,7 +714,6 @@
   .portrait-img,
   .portrait-ring--dashed,
   .tech-chip,
-  .scroll-circle,
   .hero-badge-dot {
     animation: none;
   }
@@ -783,24 +730,29 @@
    --------------------------------------------------------- */
 .me {
   margin-top: 4vh;
-  color: #ffffff;
-  font-family: sans-serif;
+  color: transparent;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(96deg, #b06bff 0%, #8b5cf6 30%, #6366f1 62%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-description {
   color: rgba(255, 255, 255, 0.7);
-  font-family: sans-serif;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
   font-size: 2vh;
   max-width: 70vh;
 }
 
 .my-status {
-  background: linear-gradient(45deg, #ff9f00, #00ff88, #00ffaa);
+  background: linear-gradient(96deg, #b06bff 0%, #8b5cf6 30%, #6366f1 62%, #38bdf8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 4vh;
   font-size: 6vh;
-  font-family: serif;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
 }
 
 .tell-about {
@@ -808,7 +760,8 @@
   margin-top: 1vh;
   color: white;
   font-size: 3vh;
-  text-shadow: 1px 1px 1px rgb(231, 6, 6);
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  text-shadow: 1px 1px 1px rgba(109, 64, 240, 0.65);
 }
 
 .social-icon-img {
