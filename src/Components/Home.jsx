@@ -153,9 +153,6 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [typed, isDeleting, roleIndex]);
 
-  const [firstWord, ...remainingWords] = typed.split(" ");
-  const restOfRole = remainingWords.join(" ");
-
   return (
     <div className="hero">
       {/* ---------------------- Background ---------------------- */}
@@ -175,17 +172,12 @@ export default function Home() {
           </span>
 
           <h1 className="hero-title">
-            <span className="hero-greeting">Hi, I&apos;m</span>
-            <span className="hero-name">IMANIRUMVA Pacifique</span>
+            <span className="hero-greeting">I&apos;m Pacifique</span>
           </h1>
 
           <p className="hero-role">
             <span className="sr-only">Full-Stack Developer</span>
-            <span className="hero-role-text" aria-hidden="true">
-              <span className="role-plain">{firstWord}</span>
-              {restOfRole && <span className="role-accent">{restOfRole}</span>}
-              <span className="role-cursor"></span>
-            </span>
+            <span className="hero-role-text" aria-hidden="true">{typed}</span>
           </p>
 
           <p className="hero-text">

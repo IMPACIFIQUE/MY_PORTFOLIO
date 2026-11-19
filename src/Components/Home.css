@@ -140,74 +140,42 @@
 
 .hero-title {
   margin-top: clamp(18px, 2.6vh, 26px);
-  font-weight: 800;
+  font-weight: 400;
 }
 
 .hero-greeting {
   display: block;
-  color: #ffffff;
-  font-size: clamp(1.9rem, 3.2vw, 2.85rem);
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-}
-
-.hero-name {
-  display: block;
-  margin-top: 6px;
-  font-size: clamp(1.95rem, 3.5vw, 3.45rem);
-  line-height: 1.06;
-  letter-spacing: -0.035em;
-  background: linear-gradient(96deg, #b06bff 0%, #8b5cf6 30%, #6366f1 62%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  filter: drop-shadow(0 10px 30px rgba(124, 58, 237, 0.32));
+  color: #d8d8e2;
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2.2rem, 4.6vw, 3.9rem);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .hero-role {
-  margin-top: clamp(12px, 1.8vh, 20px);
-  font-size: clamp(1.3rem, 2.3vw, 1.95rem);
-  font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: -0.015em;
+  margin-top: clamp(4px, 0.8vh, 10px);
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2.6rem, 6.8vw, 5.8rem);
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: -0.04em;
 }
 
 .hero-role-text {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.32em;
-}
-
-.role-plain {
-  color: #f4f0ff;
-}
-
-.role-accent {
-  background: linear-gradient(92deg, #a855f7 0%, #818cf8 55%, #22d3ee 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.role-cursor {
-  display: inline-block;
-  width: 3px;
-  height: 1.05em;
-  border-radius: 2px;
-  background: linear-gradient(180deg, #c084fc, #38bdf8);
-  box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
-  animation: heroBlink 1s steps(2, start) infinite;
+  color: #6d5dfc;
 }
 
 .hero-text {
-  max-width: 34rem;
-  margin-top: clamp(14px, 2vh, 22px);
-  color: #a8a2c0;
-  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
-  line-height: 1.8;
+  max-width: 40rem;
+  margin-top: clamp(16px, 2.2vh, 24px);
+  color: #b7b1c5;
+  font-family: "Poppins", "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.16rem);
+  line-height: 1.75;
+  font-weight: 400;
+  text-wrap: pretty;
 }
 
 /* --------------------------- Stats -------------------------- */
@@ -434,16 +402,6 @@
 
 /* ------------------------ Animations ------------------------ */
 
-@keyframes heroBlink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
 @keyframes heroFloat {
   0%,
   100% {
@@ -609,15 +567,11 @@
   }
 
   .hero-greeting {
-    font-size: clamp(1.85rem, 8vw, 2.4rem);
-  }
-
-  .hero-name {
-    font-size: clamp(1.85rem, 8.4vw, 2.6rem);
+    font-size: clamp(1.7rem, 7.4vw, 2.3rem);
   }
 
   .hero-role {
-    font-size: clamp(1.15rem, 5.4vw, 1.45rem);
+    font-size: clamp(2.1rem, 10.4vw, 3.1rem);
   }
 
   .hero-text {
@@ -716,11 +670,6 @@
   .tech-chip,
   .hero-badge-dot {
     animation: none;
-  }
-
-  .role-cursor {
-    animation: none;
-    opacity: 1;
   }
 }
 
