@@ -10,12 +10,16 @@
 }
 
 .about-title {
-    color: #ff9f00;
+    color: transparent;
     font-size: 5vh;
-    font-family: sans-serif;
+    font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
     margin-bottom: 5vh;
     letter-spacing: 2px;
     padding-bottom: 1vh;
+    background: linear-gradient(96deg, #b06bff 0%, #8b5cf6 30%, #6366f1 62%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* TOP SECTION LAYOUT */
@@ -48,8 +52,8 @@
 
 .mv-card {
     flex: 1;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(139, 92, 246, 0.06);
+    border: 1px solid rgba(139, 92, 246, 0.2);
     padding: 2.5vh;
     border-radius: 8px;
     backdrop-filter: blur(10px);
@@ -60,7 +64,7 @@
     margin: 0 0 1.5vh 0;
     font-size: 2.8vh;
     font-family: sans-serif;
-    background: linear-gradient(45deg, #ff9f00, #00ff88);
+    background: linear-gradient(45deg, #a855f7, #38bdf8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -75,8 +79,8 @@
 
 .mv-card:hover {
     transform: translateY(-5px);
-    border-color: #ff9f00;
-    box-shadow: 0 5px 15px rgba(255, 159, 0, 0.15);
+    border-color: #a855f7;
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.18);
 }
 
 /* RIGHT SIDE - TIMELINE */
@@ -85,14 +89,14 @@
 }
 
 .section-subtitle {
-    color: #ff9f00;
+    color: #a855f7;
     font-size: 3.5vh;
     font-family: sans-serif;
     margin-bottom: 4vh;
 }
 
 .timeline {
-    border-left: 2px solid #00ff88;
+    border-left: 2px solid #38bdf8;
     padding-left: 3vh;
     margin-left: 1.5vh;
 }
@@ -100,8 +104,8 @@
 .timeline-item {
     position: relative;
     margin-bottom: 5vh;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.16);
     padding: 2.5vh;
     border-radius: 8px;
     transition: transform 0.3s ease, border-color 0.3s ease;
@@ -109,23 +113,23 @@
 
 .timeline-item:hover {
     transform: translateY(-3px);
-    border-color: #00ff88;
+    border-color: #38bdf8;
 }
 
 .timeline-dot {
     width: 1.6vh;
     height: 1.6vh;
     border-radius: 50%;
-    background: #030508;
-    border: 3px solid #ff9f00;
+    background: #0b0518;
+    border: 3px solid #a855f7;
     position: absolute;
     left: -4.1vh;
     top: 3vh;
-    box-shadow: 0 0 8px #ff9f00;
+    box-shadow: 0 0 8px #a855f7;
 }
 
 .timeline-date {
-    color: #00ff88;
+    color: #38bdf8;
     font-weight: bold;
     font-size: 1.8vh;
     font-family: 'Courier New', Courier, monospace;
@@ -140,7 +144,7 @@
 
 .timeline-company {
     margin: 0.2vh 0 1vh 0;
-    color: #00ff88;
+    color: #38bdf8;
     font-size: 1.9vh;
     font-weight: normal;
     font-family: sans-serif;
@@ -163,9 +167,9 @@
 }
 
 .tech-tag {
-    background: rgba(255, 159, 0, 0.1);
-    border: 1px solid rgba(255, 159, 0, 0.3);
-    color: #ff9f00;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    color: #a855f7;
     padding: 0.3vh 1.5vh;
     border-radius: 4px;
     font-size: 1.5vh;
@@ -176,7 +180,7 @@
 .skills-section {
     margin-top: 8vh;
     padding-top: 4vh;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(139, 92, 246, 0.16);
 }
 
 .skills-grid {
@@ -190,16 +194,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 2vh 2.5vh;
-    border: 1px solid rgba(255, 255, 255, .1);
+    border: 1px solid rgba(139, 92, 246, 0.16);
     border-radius: 8px;
-    background: rgba(255, 255, 255, .02);
+    background: rgba(139, 92, 246, 0.05);
     backdrop-filter: blur(5px);
     transition: all 0.2s ease-in-out;
 }
 
 .skill-item:hover {
-    border-color: #00ff88;
-    background: rgba(0, 255, 136, 0.03);
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.03);
     transform: scale(1.02);
 }
 
@@ -211,7 +215,7 @@
 }
 
 .skill-level {
-    color: #00ff88;
+    color: #38bdf8;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.7vh;
 }
@@ -247,7 +251,7 @@
     }
 }
 .journey-experience {
-    color: #00ff88; /* Ibara ry'icyatsi kibisi risa neza */
+    color: #38bdf8; /* Ibara ry'icyatsi kibisi risa neza */
     font-family: 'Courier New', Courier, monospace;
     font-size: 2vh;
     text-transform: uppercase;
@@ -256,7 +260,7 @@
 }
 
 .section-subtitle {
-    color: #ff9f00;
+    color: #a855f7;
     font-size: 3.5vh;
     font-family: sans-serif;
     margin-top: 0;
@@ -265,7 +269,7 @@
 .show-experience{
     margin-top: -11vh;
     margin-left: 90vh;
-    color:#ff9f00;
+    color:#a855f7;
 }
 .mycv-link {
   text-decoration: none;
@@ -276,20 +280,20 @@
   height: 8vh;
   margin-top: 5vh;
   font-size: 4vh;
-  font-family: serif;
-  font-weight: bold;
-  background-color: #9d6100;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  background: linear-gradient(120deg, #8b5cf6 0%, #6366f1 52%, #3b82f6 100%);
   border: none;
   border-radius: 1vh;
-  color: #000000;
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px #000000;
+  box-shadow: 0 10px 26px rgba(109, 64, 240, 0.45);
 }
 
 .mycv-btn:hover {
-  background-color: #ff9f00;
+  background: linear-gradient(120deg, #9d6bff 0%, #7c7ef7 52%, #4f93ff 100%);
   color: #ffffff;
   transform: scale(1.05);
- filter: drop-shadow(0 0 1px #00ff88);
+ filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.55));
 }
