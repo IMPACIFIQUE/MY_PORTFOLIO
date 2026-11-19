@@ -32,7 +32,7 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
-  background: #0c0c0c;
+  background: #070212;
   color: #333;
   overflow-x: hidden;
 }
@@ -55,47 +55,31 @@ body {
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    radial-gradient(circle at 50% 60%, rgba(255, 159, 0, 0.15), transparent 80%); /* Iyi izana glow isa n'umuhondo ijana n'izina ryawe */
-  background-size: 40px 40px, 40px 40px, auto; /* Ingano ya buri square */
+    radial-gradient(circle at 50% 60%, rgba(168, 85, 247, 0.15), transparent 80%); 
+  background-size: 40px 40px, 40px 40px, auto;
 }
 
-#about {
-
-  background: #05090f;
-
-}
-
-#skills {
-
-  background: #05090f;
-
-
-}
-
-#projects {
-  background:#05090f;
-}
-
-#testimonials {
-
-  background: #05090f;
+#about,
+#skills,
+#projects,
+#testimonials,
+#contact {
+  /* The same gradient family as the Home hero, fixed to the viewport so the
+     whole site reads as one continuous background instead of separate boxes.
+     The header backdrop uses this exact stack, so its bottom edge blends in. */
+  background-color: #070212;
+  background-image:
+    radial-gradient(110% 80% at 82% 18%, rgba(109, 40, 217, 0.3), transparent 62%),
+    radial-gradient(90% 70% at 8% 92%, rgba(37, 99, 235, 0.14), transparent 66%),
+    linear-gradient(158deg, #070212 0%, #0c0420 34%, #140734 62%, #090420 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  background-size: 100% 100svh;
+  background-attachment: fixed;
 }
 
 #contact {
-  background: #05090f;
-
-}
-
-#projects {
-  background:  #05090f;
-}
-
-#testimonials {
-  background:  #05090f;
-}
-
-#contact {
-  background: #030109;
+  background-color: #070212;
   color: white;
   height: 90vh;
 }
