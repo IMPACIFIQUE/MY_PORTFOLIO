@@ -15,20 +15,21 @@
 
 .projects-title {
   font-size: 5vh;
-  font-family: serif;
-  background: linear-gradient(45deg, #ff9f00, #00ff88);
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(96deg, #b06bff 0%, #8b5cf6 30%, #6366f1 62%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: 2px;
 }
 
 .title-underline {
   width: 10vh;
   height: 4px;
-  background: #00ff88;
+  background: #38bdf8;
   margin: 1vh auto 0;
   border-radius: 2px;
-  box-shadow: 0 0 10px #00ff88;
+  box-shadow: 0 0 10px #38bdf8;
 }
 
 /* --- PROJECTS GRID --- */
@@ -41,22 +42,22 @@
 
 /* --- PROJECT CARD (Byakopewe kuri Home.css style) --- */
 .project-card {
-  background: rgba(3, 5, 8, 0.8);
+  background: linear-gradient(160deg, rgba(32, 21, 64, 0.82), rgba(13, 7, 30, 0.86));
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.24);
   border-radius: 8px;
   padding: 4vh 3vh;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 18px 42px rgba(2, 0, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: #ff9f00;
-  box-shadow: 0 15px 40px rgba(255, 159, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.7);
+  border-color: rgba(168, 85, 247, 0.65);
+  box-shadow: 0 22px 50px rgba(109, 64, 240, 0.28), 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .project-number {
@@ -65,7 +66,7 @@
   right: 20px;
   font-size: 3.5vh;
   font-family: 'Courier New', monospace;
-  color: rgba(0, 255, 136, 0.2);
+  color: rgba(56, 189, 248, 0.2);
   font-weight: bold;
 }
 
@@ -78,7 +79,7 @@
 }
 
 .project-card:hover .project-content h3 {
-  color: #00ff88;
+  color: #38bdf8;
 }
 
 .project-content p {
@@ -100,8 +101,8 @@
 
 .tech-badge {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(0, 255, 136, 0.3);
-  color: #00ff88;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
   font-family: 'Courier New', monospace;
   font-size: 1.5vh;
   padding: 0.5vh 1.5vh;
@@ -111,7 +112,7 @@
 /* --- LINK STYLING --- */
 .view-project-link {
   text-decoration: none;
-  color: #ff9f00;
+  color: #a855f7;
   font-weight: bold;
   font-size: 1.8vh;
   font-family: sans-serif;
