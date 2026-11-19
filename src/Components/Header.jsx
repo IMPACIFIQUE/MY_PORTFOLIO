@@ -14,7 +14,6 @@ const NAV_LINKS = [
 
 export default function Header() {
   const headerRef = useRef(null);
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
   const [iconsReady, setIconsReady] = useState(false);
@@ -22,8 +21,6 @@ export default function Header() {
   // Keep track of the scroll position and of the section currently in view.
   useEffect(() => {
     const syncHeader = () => {
-      setScrolled(window.scrollY > 24);
-
       const marker = window.innerHeight * 0.34;
       let current = "home";
       let closestTop = -Infinity;
@@ -135,7 +132,7 @@ export default function Header() {
   };
 
   return (
-    <header ref={headerRef} className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
+    <header ref={headerRef} className="site-header">
       <div className="header-inner">
         <a
           className="brand"
