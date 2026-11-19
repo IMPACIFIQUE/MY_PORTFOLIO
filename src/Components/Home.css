@@ -140,60 +140,30 @@
 
 .hero-title {
   margin-top: clamp(18px, 2.6vh, 26px);
-  font-weight: 800;
+  font-weight: 400;
 }
 
 .hero-greeting {
   display: block;
-  color: #ffffff;
-  font-family: "Poppins", "Plus Jakarta Sans", sans-serif;
-  font-size: clamp(1.9rem, 4vw, 3.4rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: 0.005em;
-  text-transform: uppercase;
-}
-
-.hero-name {
-  display: block;
-  margin-top: 4px;
-  color: #ffffff;
-  font-family: "Poppins", "Plus Jakarta Sans", sans-serif;
-  font-size: clamp(2.1rem, 5vw, 4.2rem);
-  font-weight: 800;
-  line-height: 1.04;
-  letter-spacing: 0.005em;
-  text-transform: uppercase;
+  color: #d8d8e2;
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2.2rem, 4.6vw, 3.9rem);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
 }
 
 .hero-role {
-  margin-top: clamp(16px, 2.4vh, 28px);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(1.55rem, 3.7vw, 3rem);
+  margin-top: clamp(4px, 0.8vh, 10px);
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2.6rem, 6.8vw, 5.8rem);
   font-weight: 800;
-  line-height: 1.18;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
+  line-height: 1.03;
+  letter-spacing: -0.04em;
 }
 
 .hero-role-text {
-  background: linear-gradient(96deg, #f3ba2f 0%, #e8d34b 30%, #86d976 58%, #2fd6a2 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.role-cursor {
-  display: inline-block;
-  width: 4px;
-  height: 0.92em;
-  margin-left: 0.1em;
-  border-radius: 2px;
-  background: #2fd6a2;
-  box-shadow: 0 0 12px rgba(47, 214, 162, 0.75);
-  vertical-align: -0.06em;
-  animation: heroBlink 1s steps(2, start) infinite;
+  color: #6d5dfc;
 }
 
 .hero-text {
@@ -430,16 +400,6 @@
 
 /* ------------------------ Animations ------------------------ */
 
-@keyframes heroBlink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
 @keyframes heroFloat {
   0%,
   100% {
@@ -605,15 +565,11 @@
   }
 
   .hero-greeting {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
-  }
-
-  .hero-name {
-    font-size: clamp(1.9rem, 8.8vw, 2.9rem);
+    font-size: clamp(1.7rem, 7.4vw, 2.3rem);
   }
 
   .hero-role {
-    font-size: clamp(1.2rem, 6vw, 1.75rem);
+    font-size: clamp(2.1rem, 10.4vw, 3.1rem);
   }
 
   .hero-text {
@@ -712,11 +668,6 @@
   .tech-chip,
   .hero-badge-dot {
     animation: none;
-  }
-
-  .role-cursor {
-    animation: none;
-    opacity: 1;
   }
 }
 

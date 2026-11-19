@@ -172,14 +172,12 @@ export default function Home() {
           </span>
 
           <h1 className="hero-title">
-            <span className="hero-greeting">Hi, I&apos;m</span>
-            <span className="hero-name">IMANIRUMVA Pacifique</span>
+            <span className="hero-greeting">I&apos;m Pacifique</span>
           </h1>
 
           <p className="hero-role">
             <span className="sr-only">Full-Stack Developer</span>
             <span className="hero-role-text" aria-hidden="true">{typed}</span>
-            <span className="role-cursor" aria-hidden="true"></span>
           </p>
 
           <p className="hero-text">
