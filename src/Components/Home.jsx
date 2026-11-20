@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
+import Counter from "./Counter.jsx";
 import portrait from "../assets/pc.png";
 
 const ROLES = [
@@ -10,9 +11,9 @@ const ROLES = [
 ];
 
 const STATS = [
-  { icon: "fa-solid fa-trophy", tone: "gold", value: "2+", end: 2, suffix: "+", label: "Years Experience" },
-  { icon: "fa-solid fa-briefcase", tone: "pink", value: "5+", end: 5, suffix: "+", label: "Live Projects" },
-  { icon: "fa-solid fa-code", tone: "violet", value: "100%", end: 100, suffix: "%", label: "Clean Code" },
+  { icon: "fa-solid fa-trophy", tone: "gold", end: 2, suffix: "+", label: "Years Experience" },
+  { icon: "fa-solid fa-briefcase", tone: "pink", end: 5, suffix: "+", label: "Live Projects" },
+  { icon: "fa-solid fa-code", tone: "violet", end: 100, suffix: "%", label: "Clean Code" },
 ];
 
 const TECH = [
@@ -190,7 +191,7 @@ export default function Home() {
               <div className={`stat stat--${stat.tone}`} key={stat.label}>
                 <i className={`${stat.icon} stat-icon`} aria-hidden="true"></i>
                 <div className="stat-body">
-                  <span className="stat-value">{stat.value}</span>
+                  <Counter end={stat.end} suffix={stat.suffix} />
                   <span className="stat-label">{stat.label}</span>
                 </div>
               </div>
