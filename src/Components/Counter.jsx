@@ -1,12 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Counts from 0 up to "end" and keeps the suffix ("+" or "%") visible.
 export default function Counter({ end = 0, suffix = "", duration = 2000 }) {
   const [count, setCount] = useState(0);
+  const counterRef = useRef(null);
 
   useEffect(() => {
+    const element = counterRef.current;
+
+    if (!element) return undefined;
+
     let frameId;
     let startTime;
+    let started = false;
 
     // requestAnimationFrame keeps the count smooth on every screen refresh.
     const animate = (time) => {
@@ -24,13 +30,39 @@ export default function Counter({ end = 0, suffix = "", duration = 2000 }) {
       }
     };
 
-    frameId = requestAnimationFrame(animate);
+    const startCounting = () => {
+      if (started) return; // The animation runs only once.
+      started = true;
+      frameId = requestAnimationFrame(animate);
+    };
 
-    return () => cancelAnimationFrame(frameId);
+    // Fallback for browsers that do not support IntersectionObserver.
+    if (typeof IntersectionObserver === "undefined") {
+      startCounting();
+      return () => cancelAnimationFrame(frameId);
+    }
+
+    // Start counting when the stat scrolls into view.
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          startCounting();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(frameId);
+    };
   }, [end, duration]);
 
   return (
-    <span className="stat-value">
+    <span ref={counterRef} className="stat-value">
       {count}
       {suffix}
     </span>
