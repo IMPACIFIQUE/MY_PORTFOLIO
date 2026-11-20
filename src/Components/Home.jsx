@@ -10,9 +10,9 @@ const ROLES = [
 ];
 
 const STATS = [
-  { icon: "fa-solid fa-trophy", tone: "gold", value: "2+", label: "Years Experience" },
-  { icon: "fa-solid fa-briefcase", tone: "pink", value: "5+", label: "Live Projects" },
-  { icon: "fa-solid fa-code", tone: "violet", value: "100%", label: "Clean Code" },
+  { icon: "fa-solid fa-trophy", tone: "gold", value: "2+", end: 2, suffix: "+", label: "Years Experience" },
+  { icon: "fa-solid fa-briefcase", tone: "pink", value: "5+", end: 5, suffix: "+", label: "Live Projects" },
+  { icon: "fa-solid fa-code", tone: "violet", value: "100%", end: 100, suffix: "%", label: "Clean Code" },
 ];
 
 const TECH = [
