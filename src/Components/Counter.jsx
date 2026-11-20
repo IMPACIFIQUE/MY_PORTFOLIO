@@ -2,13 +2,28 @@ import { useEffect, useRef, useState } from "react";
 
 // Counts from 0 up to "end" and keeps the suffix ("+" or "%") visible.
 export default function Counter({ end = 0, suffix = "", duration = 2000 }) {
-  const [count, setCount] = useState(0);
+  // Start at the final value when the visitor prefers reduced motion.
+  const [count, setCount] = useState(() => {
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return end;
+    }
+
+    return 0;
+  });
   const counterRef = useRef(null);
 
   useEffect(() => {
     const element = counterRef.current;
 
     if (!element) return undefined;
+
+    // If the visitor prefers less motion, the final number is already shown.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return undefined;
+    }
 
     let frameId;
     let startTime;
