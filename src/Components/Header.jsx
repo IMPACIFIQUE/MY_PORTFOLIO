@@ -5,9 +5,10 @@ import cvFile from "../assets/IMANIRUMVA_Pacifique_FlowCV_Resume_2026-04-22.pdf"
 const NAV_LINKS = [
   { id: "home", label: "Home", icon: "home" },
   { id: "about", label: "About", icon: "person" },
+  // Experience now follows About in the navbar; its icon moves with it.
+  { id: "experience", label: "Experience", icon: "work_history" },
   { id: "skills", label: "Skills", icon: "psychology" },
   { id: "projects", label: "Projects", icon: "grid_view" },
-  { id: "experience", label: "Experience", icon: "work_history" },
   { id: "testimonials", label: "Testimonials", icon: "reviews" },
   { id: "contact", label: "Contact", icon: "mail" },
 ];
