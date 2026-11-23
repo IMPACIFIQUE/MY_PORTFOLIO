@@ -64,3 +64,4 @@ export default function Projects() {
   );
 }
 // Purpose: module documentation
+// Note: reviewed for clarity
