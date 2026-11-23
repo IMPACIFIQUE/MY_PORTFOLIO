@@ -43,3 +43,4 @@ export default function App() {
 // Structure: annotated
 // Routing: maps paths to page components
 // Layout: wraps routed pages with shared chrome
+// Composition: assembles providers and routes
