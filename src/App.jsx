@@ -45,3 +45,4 @@ export default function App() {
 // Layout: wraps routed pages with shared chrome
 // Composition: assembles providers and routes
 // Theme: applies global styles at root
+// Sanity: root renders without crashing
