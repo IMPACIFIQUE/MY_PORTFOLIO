@@ -211,3 +211,4 @@ export default function Header() {
 }
 // Purpose: module documentation
 // Note: reviewed for clarity
+// Format: normalized spacing
