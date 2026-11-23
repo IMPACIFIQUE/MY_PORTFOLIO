@@ -95,3 +95,4 @@ export default function About() {
     </div>
   );
 }
+// Purpose: module documentation
