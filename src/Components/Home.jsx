@@ -253,3 +253,4 @@ export default function Home() {
 }
 // Purpose: module documentation
 // Note: reviewed for clarity
+// Format: normalized spacing
