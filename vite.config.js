@@ -6,3 +6,4 @@ export default defineConfig({
   plugins: [react()],
 })
 // Purpose: module documentation
+// Note: reviewed for clarity
