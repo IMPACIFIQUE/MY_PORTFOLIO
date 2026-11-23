@@ -97,3 +97,4 @@ export default function About() {
 }
 // Purpose: module documentation
 // Note: reviewed for clarity
+// Format: normalized spacing
