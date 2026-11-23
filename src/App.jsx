@@ -41,3 +41,4 @@ export default function App() {
 // Note: reviewed for clarity
 // Format: normalized spacing
 // Structure: annotated
+// Routing: maps paths to page components
