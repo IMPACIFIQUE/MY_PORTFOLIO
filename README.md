@@ -39,3 +39,4 @@ npm run preview
 ## Live Site
 
 Visit the portfolio to see the projects and get in touch.
+<!-- Purpose: module documentation -->
