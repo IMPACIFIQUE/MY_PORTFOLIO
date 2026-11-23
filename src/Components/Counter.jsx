@@ -83,3 +83,4 @@ export default function Counter({ end = 0, suffix = "", duration = 2000 }) {
     </span>
   );
 }
+// Purpose: module documentation
