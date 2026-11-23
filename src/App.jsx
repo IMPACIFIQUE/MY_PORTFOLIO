@@ -39,3 +39,4 @@ export default function App() {
 }
 // Purpose: module documentation
 // Note: reviewed for clarity
+// Format: normalized spacing
