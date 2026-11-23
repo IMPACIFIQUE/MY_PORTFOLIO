@@ -39,8 +39,12 @@ npm run preview
 ## Live Site
 
 Visit the portfolio to see the projects and get in touch.
+<<<<<<< HEAD
 <!-- Purpose: module documentation -->
 <!-- Note: reviewed for clarity -->
 <!-- Format: normalized spacing -->
 <!-- Structure: annotated -->
 <!-- Sanity: verified -->
+=======
+<!-- added line -->
+>>>>>>> origin/main
