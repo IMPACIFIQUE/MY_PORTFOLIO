@@ -7,3 +7,4 @@ export default defineConfig({
 })
 // Purpose: module documentation
 // Note: reviewed for clarity
+// Format: normalized spacing
