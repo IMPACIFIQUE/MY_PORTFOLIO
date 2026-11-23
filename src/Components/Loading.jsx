@@ -66,3 +66,4 @@ const Loading = () => {
 
 export default Loading;
 // Purpose: module documentation
+// Note: reviewed for clarity
