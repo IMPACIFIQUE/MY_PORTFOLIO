@@ -159,3 +159,4 @@ const SkillsCard = () => {
 export default SkillsCard;
 // Purpose: module documentation
 // Note: reviewed for clarity
+// Format: normalized spacing
