@@ -43,3 +43,4 @@ Visit the portfolio to see the projects and get in touch.
 <!-- Note: reviewed for clarity -->
 <!-- Format: normalized spacing -->
 <!-- Structure: annotated -->
+<!-- Sanity: verified -->
