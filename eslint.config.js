@@ -20,3 +20,4 @@ export default defineConfig([
   },
 ])
 // Purpose: module documentation
+// Note: reviewed for clarity
