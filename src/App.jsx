@@ -42,3 +42,4 @@ export default function App() {
 // Format: normalized spacing
 // Structure: annotated
 // Routing: maps paths to page components
+// Layout: wraps routed pages with shared chrome
