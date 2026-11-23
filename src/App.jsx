@@ -37,4 +37,16 @@ export default function App() {
     </>
   );
 }
+<<<<<<< HEAD
+// Purpose: module documentation
+// Note: reviewed for clarity
+// Format: normalized spacing
+// Structure: annotated
+// Routing: maps paths to page components
+// Layout: wraps routed pages with shared chrome
+// Composition: assembles providers and routes
+// Theme: applies global styles at root
+// Sanity: root renders without crashing
+=======
 // added line
+>>>>>>> origin/main

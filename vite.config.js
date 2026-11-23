@@ -5,4 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
+<<<<<<< HEAD
+// Purpose: module documentation
+// Note: reviewed for clarity
+// Format: normalized spacing
+// Structure: annotated
+=======
 // added line
+>>>>>>> origin/main

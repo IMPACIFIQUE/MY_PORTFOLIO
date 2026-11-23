@@ -251,4 +251,11 @@ export default function Home() {
     </div>
   );
 }
+<<<<<<< HEAD
+// Purpose: module documentation
+// Note: reviewed for clarity
+// Format: normalized spacing
+// Structure: annotated
+=======
 // added line
+>>>>>>> origin/main
