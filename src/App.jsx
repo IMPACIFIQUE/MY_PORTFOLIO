@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./Components/Header.jsx";
 import Home from "./Components/Home.jsx";
 import About from "./Components/About.jsx";
-import Skills from "./Components/Skills.jsx";
+import SkillsPage from "./Components/skills/SkillsPage.jsx";
 import Projects from "./Components/Project.jsx";
 import Testimon from "./Components/Testimon.jsx";
 import Contact from "./Components/Contact.jsx";
@@ -28,7 +28,7 @@ export default function App() {
         <main>
           <section id="home" className="section"><Home /></section>
           <section id="about" className="section"><About /></section>
-          <section id="skills" className="section"><Skills /></section>
+          <section id="skills" className="section"><SkillsPage /></section>
           <section id="projects" className="section"><Projects /></section>
           <section id="testimonials" className="section"><Testimon /></section>
           <section id="contact" className="section"><Contact /></section>
@@ -37,3 +37,4 @@ export default function App() {
     </>
   );
 }
+// added line
