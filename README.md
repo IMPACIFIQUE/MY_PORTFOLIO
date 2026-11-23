@@ -41,3 +41,4 @@ npm run preview
 Visit the portfolio to see the projects and get in touch.
 <!-- Purpose: module documentation -->
 <!-- Note: reviewed for clarity -->
+<!-- Format: normalized spacing -->
