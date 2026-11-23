@@ -86,3 +86,4 @@ export default function Counter({ end = 0, suffix = "", duration = 2000 }) {
 // Purpose: module documentation
 // Note: reviewed for clarity
 // Format: normalized spacing
+// Structure: annotated
