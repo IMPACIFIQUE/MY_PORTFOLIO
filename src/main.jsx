@@ -9,3 +9,4 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 // Purpose: module documentation
+// Note: reviewed for clarity
