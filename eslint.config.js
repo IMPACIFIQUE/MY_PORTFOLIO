@@ -23,3 +23,4 @@ export default defineConfig([
 // Note: reviewed for clarity
 // Format: normalized spacing
 // Structure: annotated
+// Sanity: verified
