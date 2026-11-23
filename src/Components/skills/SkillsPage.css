@@ -1,0 +1,308 @@
+/* =========================================================
+   SKILLS PAGE
+   ========================================================= */
+
+/* App.jsx wraps this page in <section id="skills" className="section">.
+   Remove the default section padding so the page can be full-width. */
+#skills.section {
+  display: block;
+  min-height: 0;
+  padding: 0;
+}
+
+.skills-page {
+  --card-bg: rgba(24, 12, 48, 0.82);
+  --text-main: #f8f5ff;
+  --text-muted: #a8a2c0;
+  --accent-purple: #b06bff;
+  --accent-violet: #8b5cf6;
+  --accent-indigo: #6366f1;
+  --accent-blue: #38bdf8;
+  width: 100%;
+  overflow: hidden;
+  color: var(--text-main);
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  background: transparent;
+}
+
+/* -------------------- My Tech Universe -------------------- */
+
+.tech-universe {
+  position: relative;
+  padding: clamp(118px, 13vw, 160px) clamp(20px, 5vw, 64px)
+    clamp(58px, 8vw, 88px);
+  background-color: #070212;
+  background-image:
+    radial-gradient(110% 80% at 82% 18%, rgba(109, 40, 217, 0.38), transparent 62%),
+    radial-gradient(90% 70% at 8% 92%, rgba(37, 99, 235, 0.16), transparent 66%),
+    linear-gradient(158deg, #070212 0%, #0c0420 34%, #140734 62%, #090420 100%);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.14);
+}
+
+.tech-universe__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-universe__header {
+  text-align: center;
+}
+
+.tech-universe__title {
+  display: inline-block;
+  margin: 0;
+  color: transparent;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  background: linear-gradient(96deg, #b06bff 0%, #8b5cf6 30%, #6366f1 62%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tech-universe__subtitle {
+  max-width: 620px;
+  margin: 14px auto 0;
+  color: var(--text-muted);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.tech-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 52px) clamp(16px, 2.5vw, 28px);
+  margin-top: clamp(42px, 6vw, 70px);
+}
+
+.tech-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  cursor: default;
+  will-change: transform;
+}
+
+.tech-logo__icon {
+  display: grid;
+  place-items: center;
+  width: clamp(48px, 4.5vw, 66px);
+  height: clamp(48px, 4.5vw, 66px);
+  color: #b9a6dc;
+  opacity: 0.45;
+  filter: grayscale(1);
+  transition: color 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.tech-logo__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tech-logo__name {
+  color: #b9a6dc;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: color 0.3s ease;
+}
+
+.tech-logo:hover .tech-logo__icon {
+  color: var(--brand-color);
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.tech-logo:hover .tech-logo__name {
+  color: #ede7fb;
+}
+
+/* --------------------- Skill cards ------------------------ */
+
+.skills-cards-section {
+  padding: clamp(56px, 8vw, 88px) clamp(20px, 5vw, 64px)
+    clamp(88px, 10vw, 120px);
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(124, 58, 237, 0.14),
+    transparent 45%
+  );
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  height: 100%;
+  padding: 24px;
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.14), transparent 42%),
+    var(--card-bg);
+  box-shadow: 0 18px 45px rgba(2, 0, 12, 0.32);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 22px 55px rgba(2, 0, 12, 0.45),
+    0 0 0 1px rgba(168, 85, 247, 0.16), 0 0 34px rgba(139, 92, 246, 0.16);
+}
+
+.skill-card__title {
+  margin: 0;
+  color: #f8f5ff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.skill-card__divider {
+  height: 1px;
+  margin: 14px 0 18px;
+  background: rgba(168, 85, 247, 0.16);
+}
+
+.skill-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------------------- Skill row ------------------------- */
+
+.skill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.skill-row__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.skill-row__name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  color: #e9e3f7;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.skill-row__icon {
+  display: inline-flex;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.skill-row__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.skill-row__meta {
+  flex-shrink: 0;
+  color: #9a8fb8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* --------------------- Progress bar ----------------------- */
+
+.skill-progress {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 85, 247, 0.1);
+  border-radius: 999px;
+  background: #0d0620;
+}
+
+.skill-progress__fill {
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--accent-purple) 0%,
+    var(--accent-violet) 30%,
+    var(--accent-indigo) 62%,
+    var(--accent-blue) 100%
+  );
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+}
+
+/* ----------------------- Responsive ----------------------- */
+
+@media (max-width: 1024px) {
+  .tech-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-universe {
+    padding-top: 112px;
+    padding-bottom: 52px;
+  }
+
+  .tech-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 16px;
+    margin-top: 38px;
+  }
+
+  .tech-logo__name {
+    font-size: 0.76rem;
+  }
+
+  .skills-cards-section {
+    padding-bottom: 80px;
+  }
+
+  .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .skill-card {
+    padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-logo__icon,
+  .tech-logo__name,
+  .skill-card {
+    transition: none;
+  }
+}
+/* added line */
