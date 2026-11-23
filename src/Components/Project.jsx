@@ -63,3 +63,4 @@ export default function Projects() {
     </div>
   );
 }
+// Purpose: module documentation
