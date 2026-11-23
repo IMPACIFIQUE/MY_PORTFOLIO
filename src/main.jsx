@@ -11,3 +11,4 @@ createRoot(document.getElementById('root')).render(
 // Purpose: module documentation
 // Note: reviewed for clarity
 // Format: normalized spacing
+// Structure: annotated
