@@ -209,3 +209,4 @@ export default function Header() {
     </header>
   );
 }
+// Purpose: module documentation
