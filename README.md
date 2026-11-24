@@ -1,50 +1,18 @@
 # MY_PORTFOLIO
 
-A personal portfolio website built with React and Vite, showcasing my work as a
-Full-Stack Developer.
+My personal portfolio website as a Full-Stack Developer, built with React, Vite, React Router and Framer Motion.
 
-## Tech Stack
+## Status
 
-- React 18
-- Vite
-- React Router
-- Framer Motion
-- Plain CSS with a custom design system
+Currently hosted in development mode.
 
 ## Sections
 
-- Home / Hero
-- About
-- Skills
-- Projects
-- Testimonials
-- Contact
+Home, About, Skills, Projects, Testimonials, Contact
 
-## Getting Started
+## Run it
 
-```bash
-# install dependencies
-npm install
+    npm install
+    npm run dev
 
-# start the dev server
-npm run dev
-
-# build for production
-npm run build
-
-# preview the production build
-npm run preview
-```
-
-## Live Site
-
-Visit the portfolio to see the projects and get in touch.
-<<<<<<< HEAD
-<!-- Purpose: module documentation -->
-<!-- Note: reviewed for clarity -->
-<!-- Format: normalized spacing -->
-<!-- Structure: annotated -->
-<!-- Sanity: verified -->
-=======
-<!-- added line -->
->>>>>>> origin/main
+Then open http://localhost:5173.
